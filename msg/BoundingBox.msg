@@ -4,10 +4,8 @@ uint16 ymin
 uint16 xmax
 uint16 ymax
 uint16 id
-uint16 center_x
-uint16 center_y
-uint16 width
-uint16 height
+uint16 img_width
+uint16 img_height
 int32 center_dist
 
 string class_id
