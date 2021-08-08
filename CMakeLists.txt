@@ -15,11 +15,6 @@ add_message_files(
     BoundingBoxes.msg
 )
 
-add_action_files(
-  FILES
-    CheckForObjects.action
-)
-
 generate_messages(
   DEPENDENCIES
     std_msgs
