@@ -1,19 +1,32 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.12)
 project(bboxes_ex_msgs)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
 
-find_package(ament_cmake REQUIRED)
-find_package(builtin_interfaces REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/BoundingBox.msg"
-  "msg/BoundingBoxes.msg"
-  # "msg/ObjectCount.msg"
-  DEPENDENCIES builtin_interfaces std_msgs 
+find_package(catkin REQUIRED
+  COMPONENTS
+    std_msgs
+    message_generation
 )
 
-ament_export_dependencies(rosidl_default_runtime)
-ament_package()
+add_message_files(
+  FILES
+    BoundingBox.msg
+    BoundingBoxes.msg
+)
+
+add_action_files(
+  FILES
+    CheckForObjects.action
+)
+
+generate_messages(
+  DEPENDENCIES
+    std_msgs
+)
+
+catkin_package(
+  CATKIN_DEPENDS
+    message_runtime
+    std_msgs
+)
