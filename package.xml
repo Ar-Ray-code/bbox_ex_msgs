@@ -3,8 +3,9 @@
   <name>bboxes_ex_msgs</name>
   <version>0.0.0</version>
   <description>bboxes_ex_msgs pkg </description>
+  <maintainer email="ray255ar@gmail.com">Ar-Ray-code</maintainer>
   <license>Apatch-2.0</license>
-  <author email="ray255ar@gmail.com">Ar-Ray</author>
+  <author email="ray255ar@gmail.com">Ar-Ray-code</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
