@@ -9,3 +9,4 @@ uint16 img_height
 int32 center_dist
 
 string class_id
+uint16 class_id_int
